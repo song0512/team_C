@@ -11,14 +11,16 @@ public class Screen extends Canvas implements KeyListener {
 
 	private int x = 0;
 	private int y = 0;
-	
+	private int a = 0;
+	private int b = 50;
 	private BufferedImage image;
+	private BufferedImage  image2;
 	private static final long serialVersionUID = 1L;
 	
 	public Screen() {
 		try {
 			image = ImageIO.read(new File("src/car.png"));
-			
+			image2 = ImageIO.read(new File("src/car.png"));
 			addKeyListener(this);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -29,6 +31,7 @@ public class Screen extends Canvas implements KeyListener {
 		// TODO Auto-generated method stub
 		super.paint(g);
 		g.drawImage(image, x, y, this);
+		g.drawImage(image2, a, b, this);
 	}
 	@Override
 	public void keyTyped(KeyEvent e) {
@@ -48,15 +51,19 @@ public class Screen extends Canvas implements KeyListener {
 		{
 		case KeyEvent.VK_UP:
 			y -= gap;
+			b -= gap;
 			break;
 		case KeyEvent.VK_DOWN:
 			y += gap;
+			b += gap;
 			break;
 		case KeyEvent.VK_LEFT:
 			x -= gap;
+			a -= gap;
 			break;
 		case KeyEvent.VK_RIGHT:
 			x += gap;
+			a += gap;
 			break;
 		}
 		System.out.println(x+", "+y);

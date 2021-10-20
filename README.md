@@ -17,6 +17,5 @@
   
 	2. 도, 개, 걸 확정권
   
-	3. 앞 말에 순간이동으로 업히기
 
 ![간트](https://user-images.githubusercontent.com/90451923/135799887-81fefe87-76a0-4c99-9b76-8b9cf38ed9fd.PNG)
